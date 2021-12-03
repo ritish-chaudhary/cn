@@ -1,0 +1,21 @@
+.input {
+  & > input {
+    &:focus {
+      border-color: $color-primary;
+      & ~ label {
+        color: $color-primary;
+      }
+    }
+  }
+  &.invalid {
+    & > input {
+      background-color: rgba($color-torch-red, 0.1);
+      border-color: $color-torch-red;
+      &:focus {
+        & ~ label {
+          color: $color-torch-red;
+        }
+      }
+    }
+  }
+}

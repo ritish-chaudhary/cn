@@ -1,0 +1,51 @@
+.new-messages-dropdown-chat-room {
+  $transition: all 0.2s ease-in-out;
+  align-items: center;
+  color: #000;
+  cursor: pointer;
+  display: flex;
+  padding: 5px 0;
+  transition: $transition;
+  &:not(:last-child) {
+    border-bottom: 1px solid $color-alto;
+  }
+  &:hover {
+    background-color: $color-primary;
+    color: #fff;
+    .notification-count {
+      margin-right: 3px;
+    }
+    .check-icon {
+      margin-right: 3px;
+      width: 15px;
+    }
+  }
+  .avatar {
+    margin: 0 14px 0 10px;
+  }
+  .chat-room-name {
+    flex: 1;
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .notification-count {
+    margin: 0 10px 0 3px;
+    transition: $transition;
+  }
+  .check-icon {
+    align-items: center;
+    color: $color-mine-shaft;
+    display: flex;
+    font-size: 12px;
+    justify-content: center;
+    opacity: 0.5;
+    overflow-x: hidden;
+    transition: $transition;
+    width: 0;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

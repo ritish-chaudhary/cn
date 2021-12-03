@@ -1,0 +1,23 @@
+.sub-menu-item-wrapper {
+  a.active {
+    .sub-menu-item {
+      background-color: $color-treehouse !important;
+    }
+  }
+  .sub-menu-item {
+    background-color: $color-saddle;
+    color: #fff;
+    cursor: pointer;
+    padding: 6px 10px;
+    transition: all 0.2s ease;
+    &:active,
+    &:focus,
+    &:hover {
+      background-color: $color-millbrook;
+    }
+    .sub-menu-title {
+      font-size: 14px;
+      margin-left: 40px;
+    }
+  }
+}

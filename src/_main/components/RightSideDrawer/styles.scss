@@ -1,0 +1,74 @@
+.chat-room-member {
+  align-items: center;
+  display: flex;
+  font-size: 14px;
+  padding: 3px 0;
+  position: relative;
+  transition: all 0.2s ease;
+  &:not(:last-child) {
+    @media screen and (max-width: $screen-mobile-max) {
+      border-bottom: 1px solid $color-outer-space;
+    }
+  }
+  &:active,
+  &:focus,
+  &:hover {
+    background-color: $color-outer-space;
+    .ellipsis-icon {
+      width: 30px;
+    }
+  }
+  &.online {
+    .member-name {
+      color: #fff;
+    }
+  }
+  &.offline {
+    .avatar {
+      filter: grayscale(100%);
+      & + .user-tooltip-wrapper {
+        .avatar {
+          filter: none;
+        }
+      }
+    }
+    .member-name {
+      color: $color-dusty-gray;
+    }
+  }
+  &.active {
+    background-color: $color-primary;
+    .online-indicator,
+    .member-name,
+    .ellipsis-icon {
+      color: #fff;
+    }
+  }
+  .avatar {
+    margin-right: 12px;
+  }
+  .member-name {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    .you-label {
+      color: $color-alto;
+      margin-left: 7px;
+    }
+  }
+  .ellipsis-icon {
+    align-items: center;
+    color: $color-dusty-gray;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    opacity: 0.5;
+    overflow-x: hidden;
+    transition: all 0.2s ease;
+    width: 0;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

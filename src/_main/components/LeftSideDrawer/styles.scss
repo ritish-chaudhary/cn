@@ -1,0 +1,51 @@
+.chat-room {
+  align-items: center;
+  color: $color-old-lace;
+  cursor: pointer;
+  display: flex;
+  font-size: 14px;
+  padding: 7px 15px;
+  transition: all 0.2s ease;
+  &:not(:last-child) {
+    @media screen and (max-width: $screen-mobile-max) {
+      border-bottom: 1px solid $color-millbrook;
+    }
+  }
+  &:active,
+  &:focus,
+  &:hover {
+    background-color: $color-millbrook;
+  }
+  &.active {
+    background-color: $color-primary;
+  }
+  &.selected {
+    background-color: $color-tertiary;
+  }
+  &.new-message {
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+  }
+  .avatar {
+    margin-right: 14px;
+  }
+  .chat-room-name {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 170px;
+    .you-label {
+      color: $color-alto;
+      margin-left: 7px;
+    }
+  }
+  .notification-count {
+    margin-left: 3px;
+  }
+  .mute-icon {
+    color: #000;
+    font-size: 14px;
+  }
+}

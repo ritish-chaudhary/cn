@@ -1,0 +1,54 @@
+/* Colors */
+$color-alabaster: #f9f9f9;
+$color-alto: #d3d3d3;
+$color-amaranth: #ea4754;
+$color-amber: #ffc107;
+$color-blue-stone: #006551;
+$color-cerulean: #00aced;
+$color-chambray: #3b5998;
+$color-corn-harvest: #85630f;
+$color-cream-brulee: #ffe5a2;
+$color-deep-cerulean: #0077b5;
+$color-deep-sea-green: #09486b;
+$color-dodger-blue: #2196f3;
+$color-dusty-gray: #999;
+$color-emperor: #555;
+$color-gallery: #eee;
+$color-guardsman-red: #d50000;
+$color-jungle-green: #26a69a;
+$color-kenyan-copper: #7c1a06;
+$color-limeade: #7fba00;
+$color-limed-spruce: #37474f;
+$color-malibu: #91d5fb;
+$color-mantis: #5dc060;
+$color-melon: #ffb8aa;
+$color-milano-red: #c61501;
+$color-millbrook: #56432f;
+$color-mine-shaft: #333;
+$color-old-lace: #fefbf7;
+$color-outer-space: #263238;
+$color-punch: #db3236;
+$color-roman-coffee: #806447;
+$color-saddle: #513b24;
+$color-seance: #9c27b0;
+$color-silver: #ccc;
+$color-stratos: #000034;
+$color-studio: #8a3ab9;
+$color-sunshade: #ffa726;
+$color-torch-red: #f41f21;
+$color-treehouse: #35281e;
+$color-water-leaf: #99e9d9;
+$color-wild-sand: #f4f4f4;
+
+// Color palette
+$color-primary: $color-jungle-green;
+$color-secondary: $color-roman-coffee;
+$color-tertiary: $color-limed-spruce;
+
+/* Screen sizes */
+$screen-mobile-min: 480px;
+$screen-tablet-min: 768px;
+$screen-desktop-min: 992px;
+$screen-small-mobile-max: $screen-mobile-min - 1;
+$screen-mobile-max: $screen-tablet-min - 1;
+$screen-tablet-max: $screen-desktop-min - 1;

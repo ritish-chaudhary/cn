@@ -1,0 +1,60 @@
+body {
+  &.login-page,
+  &.register-page {
+    background-color: $color-primary;
+    @media screen and (max-width: $screen-mobile-max) {
+      background-color: #fff;
+    }
+  }
+}
+.auth-form {
+  margin: 50px auto;
+  max-width: 400px;
+  @media screen and (max-width: $screen-mobile-max) {
+    margin: 25px auto;
+  }
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  .form-card {
+    border-radius: 5px;
+    box-shadow: 0 0 21px 0 rgba(0, 0, 0, 0.4), 0 5px 5px 0 rgba(0, 0, 0, 0.25);
+    margin: 0;
+    padding: 35px;
+    @media screen and (max-width: $screen-mobile-max) {
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+      padding: 15px;
+    }
+    input[type="password"] {
+      letter-spacing: 3px;
+    }
+    .form-title {
+      font-weight: bold;
+      margin-top: 0;
+      padding-bottom: 0.625rem;
+      position: relative;
+      &:after {
+        background-color: $color-primary;
+        bottom: 0;
+        content: '';
+        height: 3px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 70px;
+      }
+    }
+    .button {
+      display: block;
+      padding: 0;
+      width: 100%;
+    }
+  }
+  .line {
+    margin: 15px 0;
+  }
+}

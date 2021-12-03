@@ -1,0 +1,228 @@
+.chat-input-wrapper {
+  align-items: center;
+  background-color: $color-gallery;
+  display: flex;
+  height: 65px;
+  position: relative;
+  &.disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+    pointer-events: none;
+  }
+  &.small {
+    height: 60px;
+    .chat-input {
+      margin-left: 2px;
+      .textfield[contenteditable=true] {
+        $height: 30px;
+        border-radius: $height;
+        font-size: 14px;
+        line-height: 20px;
+        max-height: $height;
+        padding: 3px 10px;
+        .emojione {
+          $emoji-size: 20px;
+          height: $emoji-size;
+          width: $emoji-size;
+        }
+      }
+      .extra-buttons {
+        .extra-button {
+          padding: 4px;
+        }
+      }
+    }
+    .emoji-dialog {
+      bottom: 60px;
+      left: 0;
+      width: 100% !important;
+    }
+    .autocomplete-box-wrapper {
+      bottom: 60px;
+      left: 10px;
+      right: 10px;
+    }
+    .send-button {
+      $size: 50px;
+      flex: 0 0 $size;
+      height: $size;
+      margin: 0 2px;
+      width: $size;
+    }
+  }
+  .textfield[contenteditable=true],
+  .extra-buttons,
+  .emoji-dialog,
+  .autocomplete-box-wrapper,
+  .send-button {
+    z-index: 2;
+  }
+  .emoji-dialog {
+    border-radius: 0;
+    bottom: 65px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.16), 0 0 2px 0 rgba(0,0,0,.12);
+    height: 300px !important;
+    left: 20px;
+    position: absolute;
+    width: 350px !important;
+    @media screen and (max-width: $screen-mobile-max) {
+      left: 0;
+      width: 100% !important;
+    }
+    .emoji-dialog-header {
+      ul {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+    .emoji-row {
+      display: flex;
+      justify-content: space-between;
+    }
+    .emoji {
+      outline: none !important;
+      .emojione {
+        $emoji-size: 22px;
+        height: $emoji-size;
+        width: $emoji-size;
+      }
+    }
+  }
+  .autocomplete-box-wrapper {
+    bottom: 65px;
+    left: 20px;
+    position: absolute;
+    right: 20px;
+    width: auto;
+    @media screen and (max-width: $screen-mobile-max) {
+      left: 0;
+      width: 100% !important;
+    }
+  }
+  .chat-input {
+    display: flex;
+    flex-direction: column;
+    flex: 19;
+    margin-left: 10px;
+    .textfield[contenteditable=true] {
+      $height: 34px;
+      border: 2px solid $color-primary;
+      border-radius: $height;
+      box-sizing: border-box;
+      color: #000;
+      cursor: text;
+      font-size: 15px;
+      line-height: 24px;
+      max-height: $height;
+      padding: 3px 15px;
+      user-select: text;
+      width: 100%;
+      &:empty:before {
+        color: $color-dusty-gray;
+        content: attr(placeholder);
+        display: inline;
+      }
+      &:focus {
+        outline: none;
+      }
+      &.single-line {
+        overflow: hidden auto;
+        word-break: break-all;
+        br {
+          display: none;
+        }
+        * {
+          display: inline;
+          white-space: nowrap;
+        }
+      }
+      .emojione {
+        $emoji-size: 24px;
+        height: $emoji-size;
+        vertical-align: bottom;
+        width: $emoji-size;
+      }
+      .user-username-tag {
+        background-color: rgba($color-primary, 0.1);
+        border-radius: 3px;
+        color: $color-primary;
+        padding: 2px 5px;
+      }
+    }
+    .extras {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+    }
+    .extra-buttons {
+      display: flex;
+      font-size: 17px;
+      margin-right: 10px;
+      .extra-button {
+        align-items: center;
+        backface-visibility: hidden;
+        color: $color-emperor;
+        cursor: pointer;
+        display: flex;
+        margin: 0;
+        padding: 4px 7px;
+        text-align: center;
+        transition: all 0.3s ease;
+        @media screen and (max-width: $screen-mobile-max) {
+          padding: 5px;
+        }
+        &:active,
+        &:focus,
+        &:hover {
+          box-shadow: none;
+        }
+        &:hover {
+          color: $color-primary;
+          transform: scale(1.25);
+        }
+        &.active {
+          color: $color-primary;
+        }
+      }
+    }
+    .extra-notes {
+      align-items: center;
+      color: $color-mine-shaft;
+      display: flex;
+      font-size: 11px;
+      user-select: none;
+      @media screen and (max-width: $screen-mobile-max) {
+        display: none;
+      }
+      .note {
+        &:not(:last-child) {
+          margin-right: 3px;
+        }
+        code {
+          color: inherit;
+        }
+      }
+    }
+  }
+  .send-button {
+    $size: 60px;
+    align-items: center;
+    border-radius: 50%;
+    display: flex;
+    flex: 0 0 $size;
+    height: $size;
+    justify-content: center;
+    margin: 0 10px;
+    padding: 0;
+    position: relative;
+    width: $size;
+    &:active,
+    &:focus,
+    &:hover {
+      box-shadow: none;
+    }
+    .send-icon {
+      margin: 8px 4px 0 0;
+    }
+  }
+}
